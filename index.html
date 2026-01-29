@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineAlgo | Algorithmic Cinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="vision-section">
+        <h1 class="title">CineAlgo</h1>
+        <p class="tagline">Algorithms explained through motion.</p>
+        
+        <div class="manifesto">
+            <p>Algorithms are performed, not animated.</p>
+            <p>Motion communicates logic.</p>
+            <p>Time exposes structure.</p>
+            <p>Every frame teaches.</p>
+            <p>Nothing moves without meaning.</p>
+        </div>
+    </header>
+
+    <section class="controls-section" id="controls">
+        <div class="control-group">
+            <label>Category</label>
+            <select id="categorySelect">
+                <option value="sorting">Sorting</option>
+                <option value="searching">Searching (Array)</option>
+                <option value="pathfinding">Pathfinding (Grid)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Mode</label>
+            <select id="modeSelect">
+                <option value="single">Single Execution</option>
+                <option value="compare">Comparison Mode</option>
+            </select>
+        </div>
+
+        <div class="control-group algo-select-group">
+            <label>Algorithm A</label>
+            <select id="algoSelectA"></select>
+        </div>
+
+        <div class="control-group algo-select-group" id="groupB" style="display: none;">
+            <label>Algorithm B</label>
+            <select id="algoSelectB"></select>
+        </div>
+
+        <div class="control-group">
+            <label>Playback</label>
+            <div class="button-row">
+                <button id="btnReset">Reset</button>
+                <button id="btnPlayPause">Play</button>
+                <button id="btnStep">Step</button>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>Speed</label>
+            <input type="range" id="speedRange" min="1" max="60" value="30">
+        </div>
+    </section>
+
+    <section class="stage-section">
+        <div class="canvas-container">
+            <canvas id="cinemaCanvas"></canvas>
+        </div>
+    </section>
+
+    <section class="insight-banner" id="insightBanner">
+        <span class="insight-label">Insight</span>
+        <span id="insightText">Select an algorithm to begin the performance.</span>
+    </section>
+
+    <section class="learning-layer" id="learningLayer">
+        <div class="algo-panel" id="panelA">
+            <h2 id="titleA">Algorithm A</h2>
+            
+            <div class="metrics" id="metricsA">
+                <div class="metric-item"><span>Comparisons:</span> <span class="val">0</span></div>
+                <div class="metric-item"><span>Accesses:</span> <span class="val">0</span></div>
+            </div>
+
+            <div class="narrative-box" id="narrativeA">
+                Waiting for initialization...
+            </div>
+
+            <div class="complexity-info" id="complexityA"></div>
+
+            <div class="pseudocode-window" id="codeA"></div>
+        </div>
+
+        <div class="algo-panel" id="panelB" style="display: none;">
+            <h2 id="titleB">Algorithm B</h2>
+            
+            <div class="metrics" id="metricsB">
+                <div class="metric-item"><span>Comparisons:</span> <span class="val">0</span></div>
+                <div class="metric-item"><span>Accesses:</span> <span class="val">0</span></div>
+            </div>
+
+            <div class="narrative-box" id="narrativeB">
+                Waiting for initialization...
+            </div>
+
+            <div class="complexity-info" id="complexityB"></div>
+
+            <div class="pseudocode-window" id="codeB"></div>
+        </div>
+    </section>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
