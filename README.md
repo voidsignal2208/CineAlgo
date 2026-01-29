@@ -94,3 +94,7 @@ No build step required.
 ## 📜 License
 
 To be added.
+
+## 📐 Design Decisions
+For a detailed explanation of architectural and educational choices, see  
+[DESIGN_DECISIONS.md](DESIGN_DECISIONS.md)
